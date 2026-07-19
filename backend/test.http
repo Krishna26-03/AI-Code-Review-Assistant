@@ -1,0 +1,42 @@
+### Register User
+
+POST http://localhost:8080/api/auth/register
+Content-Type: application/json
+
+{
+  "name": "Krishna",
+  "email": "krishna@example.com",
+  "password": "Password@123"
+}
+
+### Login
+
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "krishna@example.com",
+  "password": "Password@123"
+}
+
+### List Projects
+
+GET http://localhost:8080/api/projects
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJrcmlzaG5hQGV4YW1wbGUuY29tIiwidXNlcklkIjoxLCJpYXQiOjE3ODQxNDc3MTIsImV4cCI6MTc4NDIzNDExMn0.T-_8Cbyz7rDazaZo8FoXR-akzrmtmZyfyaC1k6Ku1PE
+
+### Upload Project
+
+POST http://localhost:8080/api/projects/upload
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJrcmlzaG5hQGV4YW1wbGUuY29tIiwidXNlcklkIjoxLCJpYXQiOjE3ODQxNDc3MTIsImV4cCI6MTc4NDIzNDExMn0.T-_8Cbyz7rDazaZo8FoXR-akzrmtmZyfyaC1k6Ku1PE
+Content-Type: multipart/form-data; boundary=Boundary
+
+--Boundary
+Content-Disposition: form-data; name="projectName"
+
+Test Project
+--Boundary
+Content-Disposition: form-data; name="file"; filename="hello.java"
+Content-Type: text/plain
+
+< C:/Users/USER/OneDrive/Desktop/Hello/hello.java
+--Boundary--

@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<!DOCTYPE module PUBLIC
+        "-//Checkstyle//DTD Checkstyle Configuration 1.3//EN"
+        "https://checkstyle.org/dtds/configuration_1_3.dtd">
+
+<!--
+  Astraglass "AI Code Review Assistant" default ruleset.
+  A pragmatic subset of Sun/Google conventions chosen to work out-of-the-box
+  on arbitrary uploaded source (no external header/import-control files needed).
+-->
+<module name="Checker">
+    <property name="charset" value="UTF-8"/>
+    <property name="severity" value="warning"/>
+    <property name="tabWidth" value="4"/>
+
+    <module name="TreeWalker">
+        <!-- Naming conventions -->
+        <module name="ClassTypeParameterName"/>
+        <module name="MethodName"/>
+        <module name="LocalVariableName"/>
+        <module name="MemberName"/>
+        <module name="ConstantName"/>
+        <module name="PackageName"/>
+
+        <!-- Imports -->
+        <module name="RedundantImport"/>
+        <module name="UnusedImports"/>
+        <module name="AvoidStarImport"/>
+
+        <!-- Size / complexity -->
+        <module name="MethodLength">
+            <property name="max" value="80"/>
+        </module>
+        <module name="ParameterNumber">
+            <property name="max" value="7"/>
+        </module>
+        <module name="CyclomaticComplexity">
+            <property name="max" value="12"/>
+        </module>
+
+        <!-- Best practices -->
+        <module name="EmptyBlock"/>
+        <module name="EmptyCatchBlock"/>
+        <module name="EqualsHashCode"/>
+        <module name="MagicNumber">
+            <property name="ignoreNumbers" value="-1, 0, 1, 2"/>
+        </module>
+        <module name="MissingSwitchDefault"/>
+        <module name="SimplifyBooleanExpression"/>
+        <module name="SimplifyBooleanReturn"/>
+        <module name="StringLiteralEquality"/>
+        <module name="IllegalCatch"/>
+        <module name="FinalLocalVariable">
+            <property name="severity" value="info"/>
+        </module>
+
+        <!-- Whitespace / formatting (kept lightweight, non-blocking) -->
+        <module name="WhitespaceAround">
+            <property name="severity" value="info"/>
+        </module>
+        <module name="LeftCurly">
+            <property name="severity" value="info"/>
+        </module>
+
+        <!-- Javadoc: informational only, never blocks a score -->
+        <module name="MissingJavadocMethod">
+            <property name="severity" value="info"/>
+            <property name="minLineCount" value="10"/>
+        </module>
+    </module>
+
+    <module name="FileLength">
+        <property name="max" value="2000"/>
+    </module>
+    <module name="LineLength">
+        <property name="max" value="150"/>
+        <property name="severity" value="info"/>
+    </module>
+    <module name="NewlineAtEndOfFile">
+        <property name="severity" value="info"/>
+    </module>
+</module>

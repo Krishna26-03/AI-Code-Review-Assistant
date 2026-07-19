@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: ai-code-review-backend
+    env: java
+    plan: free
+    buildCommand: "mvn -f backend/pom.xml clean package -DskipTests"
+    startCommand: "java -jar backend/target/codereview.jar"
+    envVars:
+      - key: DB_URL
+        sync: false
+      - key: DB_USERNAME
+        sync: false
+      - key: DB_PASSWORD
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: HUGGINGFACE_API_KEY
+        sync: false
+      - key: CORS_ORIGINS
+        sync: false

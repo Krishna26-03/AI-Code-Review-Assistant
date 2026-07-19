@@ -1,0 +1,10 @@
+target/
+uploads/*
+!uploads/.gitkeep
+reports/*
+!reports/.gitkeep
+.env
+application-local.properties
+*.class
+.idea/
+*.iml

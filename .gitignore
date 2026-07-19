@@ -1,0 +1,68 @@
+# =========================
+# IDE
+# =========================
+.idea/
+.vscode/
+*.iml
+*.iws
+*.swp
+*.swo
+out/
+
+# =========================
+# Java / Maven
+# =========================
+target/
+build/
+*.class
+*.jar
+*.war
+
+# =========================
+# Node.js / React / Vite
+# =========================
+node_modules/
+dist/
+.vite/
+
+# =========================
+# Environment Variables
+# =========================
+application-local.properties
+application.properties
+*.properties.local
+*.env
+.env
+env.*.local
+.env.local
+.env.production
+
+# =========================
+# Logs
+# =========================
+*.log
+
+# =========================
+# Databases
+# =========================
+*.db
+*.sqlite
+
+# =========================
+# Uploaded Files
+# =========================
+uploads/
+
+# =========================
+# Eclipse
+# =========================
+.classpath
+.project
+.settings/
+
+# =========================
+# OS Files
+# =========================
+.DS_Store
+Thumbs.db
+*.tmp
