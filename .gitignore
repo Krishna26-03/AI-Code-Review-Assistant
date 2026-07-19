@@ -29,7 +29,6 @@ dist/
 # Environment Variables
 # =========================
 application-local.properties
-application.properties
 *.properties.local
 *.env
 .env
